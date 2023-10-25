@@ -11,7 +11,7 @@ from ElasPut import PutDoc
 
 while True:
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    target_time = "2023-10-25 20:21:00"
+    target_time = "2023-10-25 23:55:00"
 
     if current_time == target_time:
         print("It's 11:55 PM UTC. Running the provided code.")

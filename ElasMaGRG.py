@@ -34,4 +34,5 @@ while True:
         dps.add_tdps()
         PutDoc("grg", connector).put_doc()
 
+        print("Process Sleeping for 23 hrs 30 mins.")
         sleep(84600)

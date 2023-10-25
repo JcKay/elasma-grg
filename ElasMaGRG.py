@@ -9,12 +9,13 @@ from ElasIndex import ElasIndex
 from ElasCompare import ElasCompare
 from ElasPut import PutDoc
 
-while True:
+processing = True
+while processing:
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     target_time = "2023-10-25 23:55:00"
 
     if current_time == target_time:
-        print("It's 11:55 PM UTC. Running the provided code.")
+        # print("It's 11:55 PM UTC. Running the provided code.")
 
         def check_directory(directory='logs/'):
             if not os.path.exists(directory):
@@ -32,4 +33,5 @@ while True:
         dps = ElasCompare(index_data)
         dps.compare_index()
         dps.add_tdps()
-        PutDoc("grg", connector).put_doc()
+        # PutDoc("grg", connector).put_doc()
+        processing = False

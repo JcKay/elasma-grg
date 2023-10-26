@@ -12,7 +12,7 @@ from ElasPut import PutDoc
 processing = True
 while processing:
     current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
-    target_time = "2023-10-25 23:55:00"
+    target_time = "2023-10-25 23:58:00"
 
     if current_time == target_time:
         # print("It's 11:55 PM UTC. Running the provided code.")
@@ -33,5 +33,5 @@ while processing:
         dps = ElasCompare(index_data)
         dps.compare_index()
         dps.add_tdps()
-        # PutDoc("grg", connector).put_doc()
+        PutDoc("grg", connector).put_doc()
         processing = False

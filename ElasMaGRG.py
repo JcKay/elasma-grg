@@ -15,7 +15,7 @@ while processing:
     # current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     # target_time = "2023-10-25 23:58:00"
     current_time = datetime.utcnow()
-    target_time = current_time.replace(hour=18, minute=18, second=0)
+    target_time = current_time.replace(hour=18, minute=21, second=0)
     print(f"current time : {current_time}")
     print(f"target time{target_time}")
     sleep(1)

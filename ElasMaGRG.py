@@ -14,10 +14,10 @@ processing = True
 while processing:
     # current_time = datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S')
     # target_time = "2023-10-25 23:58:00"
+    # print(f"current time : {current_time}")
+    # print(f"target time{target_time}")
     current_time = datetime.utcnow()
-    target_time = current_time.replace(hour=18, minute=21, second=0)
-    print(f"current time : {current_time}")
-    print(f"target time{target_time}")
+    target_time = current_time.replace(hour=23, minute=59, second=0)
     sleep(1)
 
     if current_time == target_time:

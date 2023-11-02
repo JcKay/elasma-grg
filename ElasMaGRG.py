@@ -18,9 +18,9 @@ from ElasPut import PutDoc
 #     if current_time == target_time:
 #         # print("It's 11:55 PM UTC. Running the provided code.")
 
-def check_directory(directory='/root/elasma-grg/logs/'):
-    if not os.path.exists(directory):
-        os.mkdir(directory)
+def check_directory(_directory):
+    if not os.path.exists(_directory):
+        os.mkdir(_directory)
 
 
 # Connect to Elastic and get data
@@ -29,10 +29,11 @@ data = connector.cat.indices(index="*", format="json")
 modules = ElasModules().elas_modules
 index_data = ElasIndex(data, modules).get_index_data()
 
-check_directory()
+directory = '/root/elasma-grg/logs/'
+check_directory(directory)
 
-dps = ElasCompare(index_data)
+dps = ElasCompare(index_data, directory)
 dps.compare_index()
 dps.add_tdps()
-PutDoc("grg", connector).put_doc()
+PutDoc("grg", connector, directory).put_doc()
 # processing = False

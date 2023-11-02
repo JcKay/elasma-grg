@@ -20,7 +20,7 @@ def tdps_frame(_source, dps):
 
 
 class ElasLogs:
-    def __init__(self, directory="logs/"):
+    def __init__(self, directory):
         self.directory = directory
         self.file_list = os.listdir(directory)
 

@@ -16,8 +16,9 @@ while processing:
     # target_time = "2023-10-25 23:58:00"
     current_time = datetime.now()
     target_time = current_time.replace(hour=18, minute=18, second=0)
-    print(current_time)
-    print(target_time)
+    print(f"current time : {current_time}")
+    print(f"target time{target_time}")
+    sleep(1)
 
     if current_time == target_time:
         print(f"[{datetime.now().date()}]\n"
